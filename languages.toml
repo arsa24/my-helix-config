@@ -1,0 +1,22 @@
+# [[language]]
+# name =
+# language-server =
+# auto-format =
+# formatter = {command = , args = []}
+
+[[language]]
+name = "javascript"
+formatter = {command = "prettier", args = ["--stdin-filepath", "file.js"]}
+
+[[language]]
+name = "typescript"
+formatter = {command = "prettier", args = ["--stdin-filepath", "file.ts"]}
+
+[[language]]
+name = "jsx"
+formatter = { command = "prettier", args = ["--stdin-filepath", "file.jsx"] }
+
+[[language]]
+name = "tsx"
+formatter = { command = "prettier", args = ["--stdin-filepath", "file.tsx"] }
+
