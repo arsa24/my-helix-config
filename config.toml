@@ -3,6 +3,10 @@ theme = "catppuccin_mocha"
 [editor]
 cursorline = true
 color-modes = true
+end-of-line-diagnostics = "hint"
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -12,6 +16,19 @@ select = "underline"
 [editor.indent-guides]
 render = true
 
+[editor.statusline]
+left = ["mode", "file-name", "file-modification-indicator", "spinner"]
+center = ["diagnostics", "spacer", "workspace-diagnostics"]
+right = ["version-control", "spacer", "separator", "file-type", "separator", "position",]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.lsp]
+display-progress-messages = true
+display-inlay-hints = true
+
+#keymapping
 [keys.normal]
 A-f = ":format" # format
 A-s = ":w" # save file
@@ -35,3 +52,5 @@ C-right = "move_next_word_start" # move next word
 
 [keys.select]
 A-c = "yank" # yank (copy)
+C-left = "move_prev_word_start" # move previous word
+C-right = "move_next_word_start" # move next word
