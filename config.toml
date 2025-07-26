@@ -5,6 +5,9 @@ cursorline = true
 color-modes = true
 end-of-line-diagnostics = "hint"
 
+[editor.soft-wrap]
+enable = true
+
 [editor.inline-diagnostics]
 cursor-line = "warning"
 
@@ -19,7 +22,14 @@ render = true
 [editor.statusline]
 left = ["mode", "file-name", "file-modification-indicator", "spinner"]
 center = ["diagnostics", "spacer", "workspace-diagnostics"]
-right = ["version-control", "spacer", "separator", "file-type", "separator", "position",]
+right = [
+  "version-control",
+  "spacer",
+  "separator",
+  "file-type",
+  "separator",
+  "position",
+]
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
@@ -30,27 +40,31 @@ display-inlay-hints = true
 
 #keymapping
 [keys.normal]
-A-f = ":format" # format
-A-s = ":w" # save file
-A-w = ":wq" # save and quit
-A-q = ":quit" # quit
-A-Q = ":quit-all!" # force quit all
-A-v = "paste_before" # paste yank
-A-c = "yank" # yank (copy)
-C-left = "move_prev_word_start" # move previous word
+A-f = ":format"                  # format
+A-s = ":w"                       # save file
+A-w = ":wq"                      # save and quit
+A-q = ":quit"                    # quit
+A-Q = ":quit-all!"               # force quit all
+A-v = "paste_before"             # paste yank
+A-c = "yank"                     # yank (copy)
+C-left = "move_prev_word_start"  # move previous word
 C-right = "move_next_word_start" # move next word
+A-k = "toggle_comments"          # toggle commenct
+# A-e = "" # open file explorer (root)
 
 [keys.insert]
-A-f = ":format" # format
-A-s = ":w" # save file
-A-w = ":wq" # save and quit
-A-q = ":quit" # quit
-A-Q = ":quit-all!" # force quit all
-A-v = "paste_before" #paste yank
-C-left = "move_prev_word_start" # move previous word
+A-f = ":format"                  # format
+A-s = ":w"                       # save file
+A-w = ":wq"                      # save and quit
+A-q = ":quit"                    # quit
+A-Q = ":quit-all!"               # force quit all
+A-v = "paste_before"             #paste yank
+C-left = "move_prev_word_start"  # move previous word
 C-right = "move_next_word_start" # move next word
+A-k = "toggle_comments"          # toggle commenct
 
 [keys.select]
-A-c = "yank" # yank (copy)
-C-left = "move_prev_word_start" # move previous word
+A-c = "yank"                     # yank (copy)
+C-left = "move_prev_word_start"  # move previous word
 C-right = "move_next_word_start" # move next word
+A-k = "toggle_comments"          # toggle commenct

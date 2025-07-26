@@ -5,6 +5,14 @@
 # formatter = {command = , args = []}
 
 [[language]]
+name = "rust"
+formatter = {command = "rustfmt"}
+
+[[language]]
+name = "dart"
+formatter = {command = "dart", args = ["format"]}
+
+[[language]]
 name = "javascript"
 formatter = {command = "prettier", args = ["--stdin-filepath", "file.js"]}
 
